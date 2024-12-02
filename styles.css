@@ -1,74 +1,90 @@
-/* Basic Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+body, html {
+    background: #f4f4f4;
     color: #333;
-    background-color: #f4f4f4;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    font-size: 16px;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header nav ul {
-    list-style: none;
+header .logo {
+    font-size: 24px;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
+nav ul {
+    list-style-type: none;
+    display: flex;
 }
 
-header nav ul li a {
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
 }
 
 main {
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
-section {
+.carousel {
+    display: flex;
+    overflow-x: auto;
     margin-bottom: 20px;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article {
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
+    padding: 10px;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-form input, form textarea {
-    width: 90%;
-    margin: 10px;
-    padding: 10px;
-}
-
-form button {
-    width: 94%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
+@media (max-width: 768px) {
+    .article {
+        width: 100%;
+    }
 }

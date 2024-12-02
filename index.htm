@@ -3,62 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anil's Blog</title>
+    <title>Anil's Advanced Tech Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Anil's Blog</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo">Anil's Blog</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="Search articles...">
     </header>
     <main>
-        <section id="home" class="home-section">
-            <div class="container">
-                <h2>Welcome to My Blog</h2>
-                <p>This is my space to share insights and stories with the world. Join me on my journey!</p>
+        <div id="featured" class="carousel">
+            <!-- Carousel populated by JavaScript -->
+        </div>
+        <section id="articles">
+            <h2>Latest Articles</h2>
+            <div class="articles-container">
+                <!-- Articles will be loaded here by JavaScript -->
             </div>
         </section>
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Hello! I'm Anil, a passionate blogger who loves to write about technology, life lessons, and my adventures. Learn more about my journey and experiences through my posts.</p>
-            </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Detailed background about your experience and expertise.</p>
         </section>
-        <section id="blog" class="blog-section">
-            <div class="container">
-                <h2>Latest Posts</h2>
-                <div class="blog-posts">
-                    <!-- Blog posts can be dynamically loaded here -->
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form onsubmit="handleSubmit(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
     <footer>
-        <div class="container">
-            <p>© 2023 Anil's Blog. All rights reserved.</p>
-        </div>
+        <p>© 2023 Anil's Blog. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
 </html>
-
