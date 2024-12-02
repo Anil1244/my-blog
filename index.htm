@@ -3,45 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Blog</title>
+    <title>Anil's Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My Personal Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Anil's Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section id="home">
-            <h2>Welcome to My Blog</h2>
-            <p>This is my space to share my thoughts and stories with the world.</p>
+        <section id="home" class="home-section">
+            <div class="container">
+                <h2>Welcome to My Blog</h2>
+                <p>This is my space to share insights and stories with the world. Join me on my journey!</p>
+            </div>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate blogger who loves to write about my experiences and learnings. Join me on my journey!</p>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello! I'm Anil, a passionate blogger who loves to write about technology, life lessons, and my adventures. Learn more about my journey and experiences through my posts.</p>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <h2>Latest Posts</h2>
+                <div class="blog-posts">
+                    <!-- Blog posts can be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
-        <p>Copyright © 2023 My Blog</p>
+        <div class="container">
+            <p>© 2023 Anil's Blog. All rights reserved.</p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
 </html>
+
